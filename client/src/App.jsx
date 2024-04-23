@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Button, Flex, Group, Switch, Text } from "@mantine/core";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Flex
+        mih={50}
+        gap="md"
+        justify="center"
+        align="flex-start"
+        direction="column"
+      >
+        <Group justify="flex-start">
+          <Switch size="lg" onLabel="ON" offLabel="OFF" color="lime" />
+          <Text fw={600} tt="uppercase">
+            Led rosso
+          </Text>
+        </Group>
+        <Group justify="flex-start">
+          <Switch size="lg" onLabel="ON" offLabel="OFF" color="lime" />
+          <Text fw={600} tt="uppercase">
+            Led verde
+          </Text>
+        </Group>
+        <Group justify="flex-start">
+          <Switch size="lg" onLabel="ON" offLabel="OFF" color="lime" />
+          <Text fw={600} tt="uppercase">
+            Led giallo
+          </Text>
+        </Group>
+        <Group justify="flex-start">
+          <Switch size="lg" onLabel="ON" offLabel="OFF" color="lime" />
+          <Text fw={600} tt="uppercase">
+            Led blu
+          </Text>
+        </Group>
+        <Group>
+          <Button fullWidth>SUONO</Button>
+        </Group>
+      </Flex>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

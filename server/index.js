@@ -3,6 +3,7 @@ const cors = require("cors");
 const path = require("path");
 const bodyParser = require("body-parser");
 const paths = require("./paths");
+const initSU = require("./utils/initSU");
 
 // DOTENV
 require("dotenv").config();
@@ -33,3 +34,5 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+initSU();
